@@ -1,0 +1,27 @@
+html { font-size: 31.25vw; background-color: #f4f4f4; font: 1rem/1.5 'Microsoft YaHei', 'Droid Sans Fallback', SimHei, Arial, Helvetica, tahoma, sans-serif; }
+
+* { margin: 0; padding: 0; }
+
+a { text-decoration: none; }
+
+img { border: 0; vertical-align: middle; }
+
+ul, li { list-style: none; }
+
+header { height: 40px; line-height: 2.5rem; background-color: #fff; border-bottom: 1px solid #e7e7e7; }
+header .nav { display: flex; align-items: center; position: relative; }
+header .nav .logo { float: left; display: block; width: 63px; height: 28px; background-size: 63px 28px !important; margin-left: 18px; background: url("../img/logo.png") center no-repeat; }
+header .nav input { border-radius: 6px; border: 1px solid #ccc; height: 30px; display: block; line-height: 30px; font-size: 14px; color: #999; padding: 0 0 0 36px; margin-top: 6px; flex: 1; margin-right: 15px; margin-left: 15px; width: auto; }
+header .nav em { position: absolute; top: 11px; left: 105px; background-image: url("../img/ui_3@2x.png"); background-size: 274px 228px; display: block; background-position: 0 -206px; width: 22px; height: 22px; }
+header .nav i { background-image: url("../img/ui_3@2x.png"); background-size: 274px 228px; background-position: -144px -206px; width: 16px; height: 16px; position: absolute; display: block; right: 24px; top: 14px; }
+
+nav { padding: 0 0.5rem; background: #fff; }
+nav ul { display: flex; height: 41px; align-items: center; justify-content: space-around; }
+nav ul li { width: 60px; height: 100%; text-align: center; box-sizing: border-box; }
+nav ul li a { display: block; color: #444; height: 100%; line-height: 41px; }
+nav ul li .icon { background-image: url("../img/ui_3@2x.png"); background-size: 274px 228px; background-position: -105px -206px; width: 20px; height: 19px; margin: 12px 15px 0 35px; }
+nav ul .curr { border-bottom: 4px solid #de698c; }
+
+#list ul { width: 100vw; overflow: hidden; }
+
+/*# sourceMappingURL=search.css.map */

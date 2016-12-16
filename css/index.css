@@ -1,0 +1,163 @@
+html { font-size: 31.25vw; background-color: #f4f4f4; font: 1rem/1.5 'Microsoft YaHei', 'Droid Sans Fallback', SimHei, Arial, Helvetica, tahoma, sans-serif; }
+
+* { margin: 0; padding: 0; }
+
+a { text-decoration: none; }
+
+img { border: 0; vertical-align: middle; }
+
+ul, li { list-style: none; }
+
+@media only screen and (min-width: 420px) { #banner img { width: 420px !important; } }
+@media (max-width: 340px) { footer { font-size: 0.6rem; } }
+@media screen and (max-width: 320px) { .b-app-dl .dl-area { width: 50px !important; } }
+@media screen and (min-width: 639px) { #hot .content li, #isLoading .content li, #upDate .content li, #cartoon .content li, #music .content li, #dance .content li, #game .content li, #technology .content li, #life .content li, #kichiku .content li, #fashion .content li, #happy .content li, #tv .content li, #movie .content li, #ad .content li { width: 25% !important; }
+  #upDate .content ul li:nth-last-child(2), #upDate .content ul li:nth-last-child(1) { display: none; } }
+header { height: 2.5rem; display: flex; align-items: center; border-bottom: 1px solid #e7e7e7; justify-content: space-between; background: #fff; }
+header .logo { background: url(../img/logo.png) no-repeat; display: block; width: 63px; height: 28px; background-size: cover; margin-left: 18px; }
+header .search .zoom { background: url(../img/ui_3@2x.png) 1px -205px; background-size: 274px 228px; width: 22px; height: 24px; float: left; margin-right: 25px; }
+header .search .clock { background: url(../img/ui_3@2x.png)-22px -205px; background-size: 274px 228px; width: 23px; height: 24px; float: left; margin-right: 20px; }
+header #search { position: fixed; display: none; z-index: 9999; right: 0; top: 0; width: 0; height: 0; padding: 0 12px; background: #f4f4f4; box-sizing: border-box; }
+header #search .search-top { height: 40px; width: 100%; display: flex; position: relative; align-content: center; }
+header #search .search-top input { border-radius: 6px; border: 1px solid #ccc; height: 30px; line-height: 30px; box-sizing: border-box; width: 100%; top: 5px; outline: none; position: relative; font-size: 14px; color: #999; padding: 0 0 0 36px; }
+header #search .search-top input::-webkit-input-placeholder { font-size: 12px; color: #999; }
+header #search .search-top a { width: 70px; height: 40px; line-height: 40px; text-align: center; font-size: 14px; color: #999; }
+header #search .search-top i { position: absolute; top: 9px; left: 10px; background-image: url("../img/ui_3@2x.png"); background-size: 274px 228px; display: block; background-position: 0 -206px; width: 22px; height: 22px; }
+header #search .sear-tit { height: 24px; margin-bottom: 24px; display: flex; }
+header #search .sear-tit .line { flex: 1; border-bottom: 1px solid #ccc; display: block; }
+header #search .sear-tit .name { position: relative; width: 5.6875rem; line-height: 24px; text-align: center; color: #999; font-size: 13px; top: 10px; }
+header #search .cont { max-height: 73px; overflow: hidden; }
+header #search .cont a { float: left; color: #444; font-size: 14px; display: block; border: 1px solid #ccc; border-radius: 5px; height: 26px; line-height: 26px; padding: 0 10px; margin: 0 12px 12px 0; }
+
+nav { padding: 0 0.5rem; background: #fff; }
+nav ul { display: flex; height: 41px; align-items: center; justify-content: space-around; }
+nav ul li { width: 60px; height: 100%; text-align: center; box-sizing: border-box; height: 100%; }
+nav ul li a { display: block; color: #444; height: 100%; line-height: 41px; }
+nav ul .curr { border-bottom: 4px solid #de698c; }
+
+#banner { background-color: rgba(0, 0, 0, 0.8); margin-bottom: 12px; }
+#banner ul li { width: 100%; text-align: center; }
+#banner ul li img { width: 100%; height: 175px; }
+#banner .swiper-pagination { background-color: rgba(0, 0, 0, 0.5); border-radius: 10px; padding: 0 5px; display: inline-block; width: 100px; height: 13px; line-height: 10px; left: 50%; margin-left: -50px; }
+#banner .swiper-pagination span { background: #fff; opacity: 1; }
+#banner .swiper-pagination span.swiper-pagination-bullet-active { background: #de698c; }
+
+#hot { background: #fff; }
+#hot span { background: url("../img/index@2x.png"); background-size: 30px 462px; }
+#hot .title { display: flex; height: 44px; line-height: 44px; padding: 0 12px; justify-content: space-between; align-items: center; }
+#hot .title h3 { font-weight: normal; }
+#hot .title h3 a { align-items: center; display: flex; color: #444; font-size: 14px; }
+#hot .title h3 a span { height: 20px; width: 20px; display: inline-block; background-position: -5px -215px; margin-right: 5px; }
+#hot .title h4 { font-weight: normal; }
+#hot .title h4 a { align-items: center; display: flex; color: #ffb30f; font-size: 13px; }
+#hot .title h4 a span { height: 20px; width: 20px; display: inline-block; background-position: -5px -65px; margin-right: 5px; }
+#hot .content ul { display: flex; box-sizing: border-box; justify-content: center; padding: 0 6px; width: 100%; flex-flow: row wrap; overflow: hidden; }
+#hot .content ul .hot_error img { width: 100%; }
+#hot .content ul li { box-sizing: border-box; padding: 0 6px 24px; width: 50%; }
+#hot .content ul li a dl dt img { width: 100%; border-radius: 5px; }
+#hot .content ul li a dl dd { overflow: hidden; padding-top: 5px; }
+#hot .content ul li a dl dd h3 { width: 100%; max-height: 36px; line-height: 1.4; overflow: hidden; color: #444; font-size: 13px; }
+#hot .content ul li a dl dd i { font-style: normal; }
+#hot .content ul li a dl dd p { float: left; width: 50%; font-size: 13px; color: #999; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+#hot .content ul li a dl dd p.cell_left span { display: inline-block; background-position: -5px -425px; width: 15px; height: 11px; top: 50%; margin: -6px 3px 0 0; }
+#hot .content ul li a dl dd p.cell_right span { display: inline-block; background-position: -5px -446px; width: 15px; height: 11px; top: 50%; margin: -6px 3px 0 0; }
+
+#isLoading { background: #fff; }
+#isLoading span { background: url("../img/index@2x.png"); background-size: 30px 462px; }
+#isLoading .title { display: flex; height: 44px; line-height: 44px; padding: 0 12px; justify-content: space-between; align-items: center; }
+#isLoading .title h3 { font-weight: normal; }
+#isLoading .title h3 a { align-items: center; display: flex; color: #444; font-size: 14px; }
+#isLoading .title h3 a span { height: 20px; width: 20px; display: inline-block; background-position: -5px -155px; margin-right: 5px; }
+#isLoading .title h4 { font-weight: normal; }
+#isLoading .title h4 a { align-items: center; display: flex; color: #999; font-size: 13px; }
+#isLoading .title h4 a span { height: 20px; width: 20px; display: inline-block; background-position: -5px -395px; margin-right: 5px; }
+#isLoading .content ul { display: flex; box-sizing: border-box; justify-content: center; padding: 0 6px; width: 100%; flex-flow: row wrap; overflow: hidden; }
+#isLoading .content ul .load_error img { width: 100%; }
+#isLoading .content ul li { box-sizing: border-box; padding: 0 6px 24px; width: 50%; }
+#isLoading .content ul li a dl dt img { width: 100%; border-radius: 5px; }
+#isLoading .content ul li a dl dd { overflow: hidden; padding-top: 5px; }
+#isLoading .content ul li a dl dd h3 { width: 100%; max-height: 36px; line-height: 1.4; overflow: hidden; color: #444; font-size: 13px; }
+#isLoading .content ul li a dl dd i { font-style: normal; }
+#isLoading .content ul li a dl dd p { float: left; font-size: 13px; color: #999; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+#isLoading .content ul li a dl dd p.cell_left { width: 40%; }
+#isLoading .content ul li a dl dd p.cell_left span { display: inline-block; background-position: -5px -425px; width: 15px; height: 11px; top: 50%; margin: -6px 3px 0 0; }
+#isLoading .content ul li a dl dd p.cell_right { width: 60%; }
+
+#upDate { background: #fff; }
+#upDate span { background: url("../img/index@2x.png"); background-size: 30px 462px; }
+#upDate .title { display: flex; height: 44px; line-height: 44px; padding: 0 12px; justify-content: space-between; align-items: center; }
+#upDate .title h3 { font-weight: normal; }
+#upDate .title h3 a { align-items: center; display: flex; color: #444; font-size: 14px; }
+#upDate .title h3 a span { height: 20px; width: 20px; display: inline-block; background-position: -5px -155px; margin-right: 5px; }
+#upDate .title h4 { font-weight: normal; }
+#upDate .title h4 a { align-items: center; display: flex; color: #999; font-size: 13px; }
+#upDate .title h4 a span { height: 20px; width: 20px; display: inline-block; background-position: -5px -395px; margin-right: 5px; }
+#upDate .content ul { display: flex; box-sizing: border-box; justify-content: center; padding: 0 6px; width: 100%; flex-flow: row wrap; overflow: hidden; }
+#upDate .content ul .up_error img { width: 100%; }
+#upDate .content ul li { box-sizing: border-box; padding: 0 6px 24px; width: 33.333%; }
+#upDate .content ul li a dl dt img { width: 100%; border-radius: 5px; }
+#upDate .content ul li a dl dd { overflow: hidden; padding-top: 5px; }
+#upDate .content ul li a dl dd h3 { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 100%; max-height: 36px; line-height: 1.4; text-align: center; font-size: 13px; color: #444; }
+#upDate .content ul li a dl dd i { font-style: normal; }
+#upDate .content ul li a dl dd p { text-align: center; font-size: 12px; color: #de698c; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+#cartoon, #music, #dance, #game, #technology, #life, #kichiku, #fashion, #happy, #tv, #movie, #ad { background: #fff; }
+#cartoon span, #music span, #dance span, #game span, #technology span, #life span, #kichiku span, #fashion span, #happy span, #tv span, #movie span, #ad span { background: url("../img/index@2x.png"); background-size: 30px 462px; }
+#cartoon .title, #music .title, #dance .title, #game .title, #technology .title, #life .title, #kichiku .title, #fashion .title, #happy .title, #tv .title, #movie .title, #ad .title { display: flex; height: 44px; line-height: 44px; padding: 0 12px; justify-content: space-between; align-items: center; }
+#cartoon .title h3, #music .title h3, #dance .title h3, #game .title h3, #technology .title h3, #life .title h3, #kichiku .title h3, #fashion .title h3, #happy .title h3, #tv .title h3, #movie .title h3, #ad .title h3 { font-weight: normal; }
+#cartoon .title h3 a, #music .title h3 a, #dance .title h3 a, #game .title h3 a, #technology .title h3 a, #life .title h3 a, #kichiku .title h3 a, #fashion .title h3 a, #happy .title h3 a, #tv .title h3 a, #movie .title h3 a, #ad .title h3 a { align-items: center; display: flex; color: #444; font-size: 14px; }
+#cartoon .title h3 a span, #music .title h3 a span, #dance .title h3 a span, #game .title h3 a span, #technology .title h3 a span, #life .title h3 a span, #kichiku .title h3 a span, #fashion .title h3 a span, #happy .title h3 a span, #tv .title h3 a span, #movie .title h3 a span, #ad .title h3 a span { height: 20px; width: 20px; display: inline-block; background-position: -5px -305px; margin-right: 5px; }
+#cartoon .title h4, #music .title h4, #dance .title h4, #game .title h4, #technology .title h4, #life .title h4, #kichiku .title h4, #fashion .title h4, #happy .title h4, #tv .title h4, #movie .title h4, #ad .title h4 { font-weight: normal; }
+#cartoon .title h4 a, #music .title h4 a, #dance .title h4 a, #game .title h4 a, #technology .title h4 a, #life .title h4 a, #kichiku .title h4 a, #fashion .title h4 a, #happy .title h4 a, #tv .title h4 a, #movie .title h4 a, #ad .title h4 a { align-items: center; display: flex; color: #999; font-size: 13px; }
+#cartoon .title h4 a span, #music .title h4 a span, #dance .title h4 a span, #game .title h4 a span, #technology .title h4 a span, #life .title h4 a span, #kichiku .title h4 a span, #fashion .title h4 a span, #happy .title h4 a span, #tv .title h4 a span, #movie .title h4 a span, #ad .title h4 a span { height: 20px; width: 20px; display: inline-block; background-position: -5px -395px; margin-right: 5px; }
+#cartoon .content ul, #music .content ul, #dance .content ul, #game .content ul, #technology .content ul, #life .content ul, #kichiku .content ul, #fashion .content ul, #happy .content ul, #tv .content ul, #movie .content ul, #ad .content ul { display: flex; box-sizing: border-box; justify-content: center; padding: 0 6px; width: 100%; flex-flow: row wrap; overflow: hidden; }
+#cartoon .content ul .car_error img, #music .content ul .car_error img, #dance .content ul .car_error img, #game .content ul .car_error img, #technology .content ul .car_error img, #life .content ul .car_error img, #kichiku .content ul .car_error img, #fashion .content ul .car_error img, #happy .content ul .car_error img, #tv .content ul .car_error img, #movie .content ul .car_error img, #ad .content ul .car_error img { width: 100%; }
+#cartoon .content ul li, #music .content ul li, #dance .content ul li, #game .content ul li, #technology .content ul li, #life .content ul li, #kichiku .content ul li, #fashion .content ul li, #happy .content ul li, #tv .content ul li, #movie .content ul li, #ad .content ul li { box-sizing: border-box; padding: 0 6px 24px; width: 50%; }
+#cartoon .content ul li a dl dt img, #music .content ul li a dl dt img, #dance .content ul li a dl dt img, #game .content ul li a dl dt img, #technology .content ul li a dl dt img, #life .content ul li a dl dt img, #kichiku .content ul li a dl dt img, #fashion .content ul li a dl dt img, #happy .content ul li a dl dt img, #tv .content ul li a dl dt img, #movie .content ul li a dl dt img, #ad .content ul li a dl dt img { width: 100%; border-radius: 5px; }
+#cartoon .content ul li a dl dd, #music .content ul li a dl dd, #dance .content ul li a dl dd, #game .content ul li a dl dd, #technology .content ul li a dl dd, #life .content ul li a dl dd, #kichiku .content ul li a dl dd, #fashion .content ul li a dl dd, #happy .content ul li a dl dd, #tv .content ul li a dl dd, #movie .content ul li a dl dd, #ad .content ul li a dl dd { overflow: hidden; padding-top: 5px; }
+#cartoon .content ul li a dl dd h3, #music .content ul li a dl dd h3, #dance .content ul li a dl dd h3, #game .content ul li a dl dd h3, #technology .content ul li a dl dd h3, #life .content ul li a dl dd h3, #kichiku .content ul li a dl dd h3, #fashion .content ul li a dl dd h3, #happy .content ul li a dl dd h3, #tv .content ul li a dl dd h3, #movie .content ul li a dl dd h3, #ad .content ul li a dl dd h3 { font-weight: normal; width: 100%; max-height: 36px; line-height: 1.4; overflow: hidden; color: #444; font-size: 13px; }
+#cartoon .content ul li a dl dd i, #music .content ul li a dl dd i, #dance .content ul li a dl dd i, #game .content ul li a dl dd i, #technology .content ul li a dl dd i, #life .content ul li a dl dd i, #kichiku .content ul li a dl dd i, #fashion .content ul li a dl dd i, #happy .content ul li a dl dd i, #tv .content ul li a dl dd i, #movie .content ul li a dl dd i, #ad .content ul li a dl dd i { font-style: normal; }
+#cartoon .content ul li a dl dd p, #music .content ul li a dl dd p, #dance .content ul li a dl dd p, #game .content ul li a dl dd p, #technology .content ul li a dl dd p, #life .content ul li a dl dd p, #kichiku .content ul li a dl dd p, #fashion .content ul li a dl dd p, #happy .content ul li a dl dd p, #tv .content ul li a dl dd p, #movie .content ul li a dl dd p, #ad .content ul li a dl dd p { float: left; width: 50%; font-size: 13px; color: #999; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+#cartoon .content ul li a dl dd p.cell_left span, #music .content ul li a dl dd p.cell_left span, #dance .content ul li a dl dd p.cell_left span, #game .content ul li a dl dd p.cell_left span, #technology .content ul li a dl dd p.cell_left span, #life .content ul li a dl dd p.cell_left span, #kichiku .content ul li a dl dd p.cell_left span, #fashion .content ul li a dl dd p.cell_left span, #happy .content ul li a dl dd p.cell_left span, #tv .content ul li a dl dd p.cell_left span, #movie .content ul li a dl dd p.cell_left span, #ad .content ul li a dl dd p.cell_left span { display: inline-block; background-position: -5px -425px; width: 15px; height: 11px; top: 50%; margin: -6px 3px 0 0; }
+#cartoon .content ul li a dl dd p.cell_right span, #music .content ul li a dl dd p.cell_right span, #dance .content ul li a dl dd p.cell_right span, #game .content ul li a dl dd p.cell_right span, #technology .content ul li a dl dd p.cell_right span, #life .content ul li a dl dd p.cell_right span, #kichiku .content ul li a dl dd p.cell_right span, #fashion .content ul li a dl dd p.cell_right span, #happy .content ul li a dl dd p.cell_right span, #tv .content ul li a dl dd p.cell_right span, #movie .content ul li a dl dd p.cell_right span, #ad .content ul li a dl dd p.cell_right span { display: inline-block; background-position: -5px -446px; width: 15px; height: 11px; top: 50%; margin: -6px 3px 0 0; }
+
+#music .title h3 a span { background-position: -5px -95px; }
+
+#dance .title h3 a span { background-position: -5px -335px; }
+
+#game .title h3 a span { background-position: -5px -245px; }
+
+#technology .title h3 a span { background-position: -5px -35px; }
+
+#life .title h3 a span { background-size: 20px 20px !important; background-repeat: no-repeat; background-position: center center; background-image: url(../img/index_life.png) !important; }
+
+#kichiku .title h3 a span { background-position: -5px -185px; }
+
+#fashion .title h3 a span { background-image: url(../img/index_fashion.png) !important; background-repeat: no-repeat; background-size: contain !important; background-position: center center; }
+
+#happy .title h3 a span { background-repeat: no-repeat; background-size: 20px 20px !important; background-image: url(../img/index_ent.png) !important; background-position: center center; }
+
+#tv .title h3 a span { background-position: -5px -5px; }
+
+#movie .title h3 a span { background-position: -5px -125px; }
+
+#ad .title h3 a span { background-size: 20px 20px !important; background-image: url(../img/index_advertise.png) !important; background-position: center center; background-repeat: no-repeat; }
+
+#b_app_link { left: 0; width: 100%; box-shadow: 0 1px 2px #ddd; background: #de698c; overflow: hidden; position: fixed; }
+#b_app_link .b-app-dl { display: block; background: transparent; border-radius: 3px; padding-top: 0; height: 54px; padding-left: 60px; position: relative; }
+#b_app_link .b-app-dl .app-logo { position: absolute; width: 36px; height: 36px; top: 9px; left: 12px; background-image: url("../img/app_logo.v2.png"); background-size: cover; }
+#b_app_link .b-app-dl .b-app-dl-top { line-height: 34px; height: 27px; color: #fff; font-size: 14px; }
+#b_app_link .b-app-dl .b-app-dl-bottom { line-height: 20px; overflow: hidden; height: 27px; font-size: 11px; color: #fff; opacity: 0.7; }
+#b_app_link .dl-area { position: absolute; display: inline-block; right: 24px; top: 11px; width: 60px; height: 20px; border-radius: 6px; padding: 6px 0; text-align: center; background-color: #fff; color: #de689c; font-size: 13px; }
+#b_app_link .dl-close { width: 22px; height: 22px; background-image: url("http://static.hdslb.com/mobile/img/close_icon.png"); background-position: 50%; background-size: 13px; background-repeat: no-repeat; position: absolute; right: 0; top: 16px; }
+
+#footer { color: #aaa; line-height: 1.48; text-align: center; padding: 0 10px; }
+#footer p { margin: 12px 0; overflow: hidden; }
+#footer p a { border-right: 1px solid #ddd; height: 20px; line-height: 20px; width: 33%; box-sizing: border-box; float: left; display: inline-block; color: #666; }
+#footer p a i { width: 20px; height: 20px; display: inline-block; vertical-align: top; background: url("../img/ui_2.png") center no-repeat; background-size: 400px; }
+#footer p a span { line-height: 20px; }
+#footer p a .icons-computer { background-position: -210px -10px; margin-right: 5px; }
+#footer p a .icons-app { background-position: -210px -59px; margin-right: 5px; }
+#footer p a .icons-top { background-position: -210px -109px; margin-right: 5px; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,55 @@
+html { font-size: 31.25vw; background-color: #f4f4f4; font: 1rem/1.5 'Microsoft YaHei', 'Droid Sans Fallback', SimHei, Arial, Helvetica, tahoma, sans-serif; }
+
+* { margin: 0; padding: 0; }
+
+a { text-decoration: none; }
+
+img { border: 0; vertical-align: middle; }
+
+ul, li { list-style: none; }
+
+@media (max-width: 340px) { footer { font-size: 0.6rem; } }
+header { height: 2.5rem; display: flex; align-items: center; border-bottom: 1px solid #e7e7e7; justify-content: space-between; background: #fff; }
+header .logo { background: url(../img/logo.png) no-repeat; display: block; width: 63px; height: 28px; background-size: cover; margin-left: 18px; }
+header .search .zoom { background: url(../img/ui_3@2x.png) 1px -205px; background-size: 274px 228px; width: 22px; height: 24px; float: left; margin-right: 25px; }
+header .search .clock { background: url(../img/ui_3@2x.png)-22px -205px; background-size: 274px 228px; width: 23px; height: 24px; float: left; margin-right: 20px; }
+
+#display { position: relative; overflow: hidden; }
+#display .title { position: absolute; left: 50%; top: 50%; z-index: 999; }
+#display .video { width: 100vw; }
+#display .barrage_c { position: absolute; width: 100%; height: 70%; top: 0; }
+#display .barrage_c ul li { position: absolute; display: block; width: 50vw !important; overflow: hidden; }
+
+#content_chat { border-radius: 6px; border: 1px solid #ccc; height: 30px; line-height: 30px; box-sizing: border-box; width: 70vw; top: 5px; outline: none; position: relative; font-size: 14px; color: #999; padding: 0 0 0 36px; margin: 15px; float: left; }
+
+#send { height: 35px; line-height: 35px; font-size: 10pt !important; color: #fff; background: #de698c; padding: 0 10px; border-radius: 8px; margin: 15px 0; position: absolute; right: 15px; float: left; }
+
+#content_chat::-webkit-input-placeholder { font-size: 12px; color: #999; }
+
+#info { display: flex; justify-content: space-between; height: 50px; }
+#info .info_left { display: flex; justify-content: space-between; }
+#info .info_left span { text-align: center; vertical-align: top; font-size: 0.75rem; color: #999; width: 50px; }
+#info .info_left span i { height: 24px; width: 24px; margin: 0 auto; background: url("../img/ui_2.png"); background-size: 400px; display: block; }
+#info .info_left span .info1 { background-position: -251px -100px; }
+#info .info_left span .info2 { background-position: -251px -33px; }
+#info .info_left span .info3 { background-position: -251px -67px; }
+#info .info_right a { height: 35px; line-height: 35px; font-size: 10pt !important; color: #fff; background: #de698c; padding: 0 30px; border-radius: 8px; margin: 5px 5px 0 0; position: absolute; right: 15px; }
+
+.up { background-color: #fff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 10px; overflow: hidden; font-size: 14px; font-size: 0.875rem; text-align: center; color: #444; box-sizing: border-box; margin-top: 15px; }
+.up .up-pic { position: absolute; width: 50px; height: 50px; border-radius: 25px; border: 1px solid #eee; overflow: hidden; }
+.up .up-pic img { width: 100%; }
+.up .up-right { overflow: hidden; margin-left: 64px; margin-bottom: 10px; margin-right: 64px; }
+.up .up-right .up-follow { position: absolute; right: 0; line-height: 36px; text-align: left; padding: 0 16px; border-radius: 6px; margin: 6px 20px 0; color: #de698c; background: #fff; border: 1px solid #de698c; }
+.up .up-right .up-name { color: #333; float: left; text-align: left; clear: left; line-height: 1.7rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; }
+.up .up-right .up-detail { color: #de698c; float: left; clear: left; line-height: 1.7rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; text-align: left; }
+
+.video-info { padding: 10px; }
+.video-info h1 { font-size: 1rem; font-weight: normal; position: relative; text-align: left; margin: 6px 0; }
+.video-info .video-desc { word-break: break-all; word-wrap: break-word; color: #666; font-size: 0.8rem; text-align: left; margin-bottom: 5px; }
+.video-info .tminfo { text-align: left; margin: 10px 0; }
+.video-info .tminfo a { color: #de698c; }
+.video-info .tminfo span { text-align: left; color: #444; }
+.video-info .ct li { width: 33%; float: left; line-height: 1.7rem; color: #aaa; white-space: nowrap; font-size: 0.8rem; text-align: left; }
+.video-info .ct li span { line-height: 1.7rem; color: #aaa; white-space: nowrap; font-size: 0.8rem; text-align: left; }
+
+/*# sourceMappingURL=video.css.map */

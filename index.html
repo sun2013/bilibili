@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>bilibili彈幕網</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.0.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/template-native.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.0.min.css" />
+	</head>
+
+	<body>
+		<header>
+			<a class="logo" href="index.html"></a>
+			<div class="search">
+				<a class="zoom" href="javascript:void(0)"></a>
+				<a class="clock" href="user.html"></a>
+			</div>
+			<div id="search">
+				<div class="search-top">
+					<input type="text" placeholder="搜索视频、番剧、up主或AV号" name="" id="" value="" />
+					<a href="javascript:void(0)" class="remove">取消</a>
+					<i></i>
+				</div>
+				<div class="sear-tit">
+					<span class="line"></span><span class="name">热门搜索</span><span class="line"></span>
+				</div>
+				<div class="cont">
+					<a href="">法医秦明</a>
+					<a href="">吃货木下</a>
+					<a href="">暴走大事件</a>
+					<a href="">极乐净土</a>
+					<a href="">哔哩哔哩篮球队</a>
+				</div>
+			</div>
+		</header>
+		<nav>
+			<ul>
+				<li class="curr">
+					<a href="javascript:void(0)">首页</a>
+				</li>
+				<li>
+					<a href="channel.html">频道</a>
+				</li>
+				<li>
+					<a href="http://live.bilibili.com/h5/">直播</a>
+				</li>
+				<li>
+					<a href="ranking.html">排行</a>
+				</li>
+				<li>
+					<a href="user.html">我的</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="banner" class="swiper-container">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide">
+
+				</li>
+				<script id="pic_run" type="text/html">
+					<% if(data){%>
+					<%for(var i = 0; i < data.length; i++){
+					%>
+					<li class="swiper-slide">
+						<a href="javascript:void(0)"><img src=<%=data[i].pic %> /></a>
+					</li>
+					<% } %>
+					<% } %>
+				</script>
+			</ul>
+			<div class="swiper-pagination"></div>
+		</div>
+		<div id="hot">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>热门推荐</a></h3>
+				<h4><a href="ranking.html"><span></span>排行榜</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<script id="hotList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + list[j].aid %> >
+								<dl>
+									<dt><img src=<%= list[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= list[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= list[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= list[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="isLoading">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>正在直播</a></h3>
+				<h4><a href="http://live.bilibili.com/h5/"><span></span>查看更多直播</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="load_error"></li>
+					<script id="loadList" type="text/html">
+						<% 
+							for(var m = 0; m < data.length; m++){
+						%>
+						<li>
+							<a href=<%='http://live.bilibili.com/h5/' + data[m].roomid %> >
+								<dl>
+									<dt><img src=<%= data[m].cover %> /></dt>
+									<dd>
+										<h3>
+											<%= data[m].uname %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= data[m].online %></i></p>
+										<p class="cell_right"><i><%= data[m].title %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="upDate">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>番剧更新</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多番剧</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="up_error"></li>
+					<script id="upList" type="text/html">
+						<% 
+							for(var m = 0; m < 6; m++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + list[m].bangumi_id %> >
+								<dl>
+									<dt><img src=<%= list[m].cover %> /></dt>
+									<dd>
+										<h3>
+											<%= list[m].title %>
+										</h3>
+										<p>
+											<%= "更新至第" + list[m].bgmcount+ "话" %>
+										</p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="cartoon">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>动画区</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="cartoonList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + douga[j].aid %> >
+								<dl>
+									<dt><img src=<%= douga[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= douga[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= douga[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= douga[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="music">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>音乐区</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="musicList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + music[j].aid %> >
+								<dl>
+									<dt><img src=<%= music[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= music[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= music[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= music[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="dance">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>舞蹈区</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="danceList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + dance[j].aid %> >
+								<dl>
+									<dt><img src=<%= dance[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= dance[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= dance[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= dance[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="game">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>游戏区</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="gameList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + game[j].aid %> >
+								<dl>
+									<dt><img src=<%= game[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= game[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= game[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= game[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="technology">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>科技区</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="technologyList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + technology[j].aid %> >
+								<dl>
+									<dt><img src=<%= technology[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= technology[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= technology[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= technology[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="life">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>生活区</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="lifeList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + life[j].aid %> >
+								<dl>
+									<dt><img src=<%= life[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= life[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= life[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= life[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="kichiku">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>鬼畜区</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="kichikuList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + kichiku[j].aid %> >
+								<dl>
+									<dt><img src=<%= kichiku[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= kichiku[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= kichiku[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= kichiku[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="fashion">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>时尚区</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="fashionList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + fashion[j].aid %> >
+								<dl>
+									<dt><img src=<%= fashion[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= fashion[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= fashion[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= fashion[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="happy">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>娱乐区</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="happyList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + ent[j].aid %> >
+								<dl>
+									<dt><img src=<%= ent[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= ent[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= ent[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= ent[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="tv">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>电视剧区</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="tvList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + teleplay[j].aid %> >
+								<dl>
+									<dt><img src=<%= teleplay[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= teleplay[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= teleplay[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= teleplay[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="movie">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>电影区</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="movieList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + movie[j].aid %> >
+								<dl>
+									<dt><img src=<%= movie[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= movie[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= movie[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= movie[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="ad">
+			<div class="title">
+				<h3><a href="javascript:void(0)"><span></span>广告</a></h3>
+				<h4><a href="javascript:void(0)"><span></span>查看更多更新</a></h4>
+			</div>
+			<div class="content">
+				<ul>
+					<li class="car_error"></li>
+					<script id="adList" type="text/html">
+						<% 
+							for(var j = 0; j < 4; j++){
+						%>
+						<li>
+							<a href=<%='video.html?av=' + ad[j].aid %> >
+								<dl>
+									<dt><img src=<%= ad[j].pic %> /></dt>
+									<dd>
+										<h3>
+											<%= ad[j].title %>
+										</h3>
+										<p class="cell_left"><span></span><i><%= ad[j].play %></i></p>
+										<p class="cell_right"><span></span><i><%= ad[j].video_review %></i></p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<%}%>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="b_app_link" style="bottom: 0px; display: block; position: fixed; height: 54px;">
+			<a class="b-app-dl" title="Bilibili客户端下载">
+				<div class="app-logo"></div>
+				<div class="b-app-dl-top">上bilibili客户端</div>
+				<div class="b-app-dl-bottom">高清视频 离线观看 新番电影一览无余</div>
+				<a target="_self" class="dl-area" href="">下载</a>
+				<div class="dl-close"></div>
+			</a>
+		</div>
+		<footer id="footer">
+			<p class="clearfix">
+				<a href="javascript:void(0)"><i class="icons icons-computer"></i><span>电脑版</span></a>
+				<a href="javascript:void(0);" target="_self"><i class="icons icons-app"></i>客户端</a>
+				<a href="javascript:void(0)" style="border: 0;"><i class="icons icons-top"></i>返回顶部</a>
+			</p>
+			<p>哔哩哔哩弹幕视频网 沪ICP备13002172号-3</p>
+			<p>信息网络传播视听节目许可证：<span>0910417</span></p>
+		</footer>
+	</body>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

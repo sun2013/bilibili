@@ -1,0 +1,124 @@
+html {
+    font-size: 31.25vw;
+    background-color: #f4f4f4;
+    font: 1rem/1.5 'Microsoft YaHei', 'Droid Sans Fallback', SimHei, Arial, Helvetica, tahoma, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    height: 38px;
+    line-height: 48px;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 14px 15px 12px;
+    .logo {
+        display: block;
+        width: 63px;
+        height: 28.8px;
+        float: left;
+        margin-top: 3px;
+        margin-right: 12px;
+        background: url("https://static-s.bilibili.com/account/img/logo-mobile.png");
+        background-size: 63px 28.8px;
+    }
+    .logotxt {
+        height: 42px;
+        border-left: 2px solid #de698c;
+        color: #de698c;
+        font-weight: bold;
+        padding: 17px 0 0 15px;
+    }
+}
+#form {
+    padding: 15px;
+    input {
+        border-radius: 6px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+    input::-webkit-input-placeholder {
+        color: #ccc;
+        font-size: 14px;
+    }
+    span {
+        float: right;
+        color: #00a1d6;
+    }
+    p {
+        position: relative;
+        i {
+            position: absolute;
+            right: 5px;
+            height: 35px;
+            width: 100px;
+            top: 25px;
+            display: block;
+            background: url('passport.bilibili.com/captcha?1481707034555');
+        }
+    }
+}
+section {
+    padding: 15px;
+    margin-top: 55px;
+    a {
+        display: block;
+        border: 1px solid #00a1d6;
+        text-align: center;
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 32px;
+        padding: 12px;
+        margin-bottom: 10px;
+        color: #00a1d6;
+        background: #fff;
+    }
+    .a {
+        background-color: #00a1d6;
+        color: #fff;
+    }
+}
+.sear-tit {
+    height: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    .line {
+        flex: 1;
+        border-bottom: 1px solid #ccc;
+        display: block;
+    }
+    .name {
+        position: relative;
+        line-height: 24px;
+        text-align: center;
+        color: #999;
+        font-size: 16px;
+        top: 10px;
+    }
+}
+footer {
+    text-align: center;
+    padding: 15px 0;
+    a {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 0 5px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px 50px;
+    }
+    .web {
+        background-image: url("../img/weibo.png");
+    }
+    .qq {
+        background-image: url("../img/qq.png");
+    }
+}

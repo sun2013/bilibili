@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/template-native.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.0.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/ranking.css" />
+	</head>
+
+	<body>
+		<header>
+			<a class="logo" href="index.html"></a>
+			<div class="search">
+			</div>
+		</header>
+		<div id="title">
+			<a href="index.html"></a>
+			<h2>排行榜</h2>
+		</div>
+		<div id="rank-link">
+			<ul class="rank-links">
+				<li type="all" class="on">
+					<a href="ranking.html#type=all" title="全站排行"><i class="site"></i>
+						<h3>全站排行</h3></a><span class="ui arrow"></span></li>
+				<li type="origin">
+					<a href="ranking.html#type=origin" title="原创排行"><i class="original"></i>
+						<h3>原创排行</h3></a><span class="ui arrow"></span></li>
+				<li type="bangumi">
+					<a href="ranking.html#type=bangumi" title="新番排行"><i class="bgm"></i>
+						<h3>新番排行</h3></a><span class="ui arrow"></span></li>
+			</ul>
+		</div>
+		<div id="roll-bar" class="swiper-container">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide">
+					<a class="curr" href="javascript:void(0)">全站</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:void(0)">动画</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:void(0)">音乐</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:void(0)">舞蹈</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:void(0)">游戏</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:void(0)">科技</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:void(0)">生活</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:void(0)">娱乐</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:void(0)">电影</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:void(0)">鬼畜</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:void(0)">时尚</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:void(0)">电视剧</a>
+				</li>
+			</ul>
+		</div>
+		<div id="rank">
+			<ul>
+				<script id="all_rank" type="text/html">
+					
+					<% for(var i = 0; i < list.length; i++){ %>
+						<li style="margin-bottom: 20px;">
+							<a href=<%='video.html?av=' + list[i].aid %> >
+								<div class="l">
+									<span class="num"><%= i+1 %></span>
+									<i>
+										<img src=<%= list[i].pic %> />
+									</i>
+								</div>
+								<div class="r">
+									<div class="r-box">
+										<div class="title"><%= list[i].title %></div>
+										<div class="meta">
+											<div class="up">UP主：<span><%= list[i].author %></span></div>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+					<% } %>
+				</script>
+			</ul>
+		</div>
+	</body>
+	<script src="js/ranking.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

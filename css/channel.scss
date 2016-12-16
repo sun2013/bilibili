@@ -1,0 +1,285 @@
+html {
+    font-size: 31.25vw;
+    background-color: #f4f4f4;
+    font: 1rem/1.5 'Microsoft YaHei', 'Droid Sans Fallback', SimHei, Arial, Helvetica, tahoma, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+ul,
+li {
+    list-style: none;
+}
+@media (max-width: 340px) {
+    footer {
+        font-size: 0.6rem;
+    }
+}
+header {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e7e7e7;
+    justify-content: space-between;
+    background: #fff;
+    .logo {
+        background: url(../img/logo.png)no-repeat;
+        display: block;
+        width: 63px;
+        height: 28px;
+        background-size: cover;
+        margin-left: 18px;
+    }
+    .search {
+        .zoom {
+            background: url(../img/ui_3@2x.png)1px -205px;
+            background-size: 274px 228px;
+            width: 22px;
+            height: 24px;
+            float: left;
+            margin-right: 25px;
+        }
+        .clock {
+            background: url(../img/ui_3@2x.png)-22px -205px;
+            background-size: 274px 228px;
+            width: 23px;
+            height: 24px;
+            float: left;
+            margin-right: 20px;
+        }
+    }
+}
+nav {
+    padding: 0 0.5rem;
+    background: #fff;
+    ul {
+        display: flex;
+        height: 41px;
+        align-items: center;
+        justify-content: space-around;
+        li {
+            width: 60px;
+            height: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            height: 100%;
+            a {
+                display: block;
+                color: #444;
+                height: 100%;
+                line-height: 41px;
+            }
+        }
+        .curr {
+            border-bottom: 4px solid #de698c;
+        }
+    }
+}
+#channelList {
+    padding: 18px 0;
+    border-top: 1px solid #e7e7e7;
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        li {
+            width: 33.33333%;
+            a {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                padding: 0.625rem 0;
+                span {
+                    width: 68px;
+                    height: 68px;
+                    margin: 0 auto 0.4375rem;
+                    background-image: url("../img/ui_3@2x.png");
+                    background-size: 274px 228px;
+                    display: block;
+                    position: relative;
+                    i {
+                        box-sizing: border-box;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-size: 12px;
+                        color: #fff;
+                        background-color: #ccc;
+                        height: 1.0625rem;
+                        text-align: center;
+                        padding: 0 5px;
+                        border-radius: 8px;
+                        font-style: normal;
+                    }
+                }
+                h3 {
+                    color: #212121;
+                    font-size: 14px;
+                    font-weight: normal;
+                }
+                .item1 {
+                    background-position: -137px 0;
+                }
+                .item2 {
+                    background-position: -206px -137px;
+                }
+                .item3 {
+                    background-position: -206px 0;
+                }
+                .item4 {
+                    background-position: 0 -69px;
+                }
+                .item5 {
+                    background-position: -206px -69px;
+                }
+                .item6 {
+                    background-position: 0 -137px;
+                }
+                .item7 {
+                    background-position: -69px 0;
+                }
+                .item8 {
+                    background-image: url("../img/channel_life@2x.png");
+                    background-size: 68px 68px;
+                }
+                .item9 {
+                    background-position: -137px -69px;
+                }
+                .item10 {
+                    background-image: url("../img/channel_ent@2x.png");
+                    background-size: 68px 68px;
+                }
+                .item11 {
+                    background-position: -69px -69px;
+                }
+                .item12 {
+                    background-position: 0 0;
+                }
+                .item13 {
+                    background-position: -69px -137px;
+                }
+                .item14 {
+                    background-image: url("../img/channel_advertise@2x.png");
+                    background-size: 68px 68px;
+                }
+            }
+        }
+    }
+}
+#b_app_link {
+    left: 0;
+    width: 100%;
+    box-shadow: 0 1px 2px #ddd;
+    background: #de698c;
+    overflow: hidden;
+    position: fixed;
+    .b-app-dl {
+        display: block;
+        background: transparent;
+        border-radius: 3px;
+        padding-top: 0;
+        height: 54px;
+        padding-left: 60px;
+        position: relative;
+        .app-logo {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            top: 9px;
+            left: 12px;
+            background-image: url("../img/app_logo.v2.png");
+            background-size: cover;
+        }
+        .b-app-dl-top {
+            line-height: 34px;
+            height: 27px;
+            color: #fff;
+            font-size: 14px;
+        }
+        .b-app-dl-bottom {
+            line-height: 20px;
+            overflow: hidden;
+            height: 27px;
+            font-size: 11px;
+            color: #fff;
+            opacity: 0.7;
+        }
+    }
+    .dl-area {
+        position: absolute;
+        display: inline-block;
+        right: 24px;
+        top: 11px;
+        width: 60px;
+        height: 20px;
+        border-radius: 6px;
+        padding: 6px 0;
+        text-align: center;
+        background-color: #fff;
+        color: #de689c;
+        font-size: 13px;
+    }
+    .dl-close {
+        width: 22px;
+        height: 22px;
+        background-image: url("http://static.hdslb.com/mobile/img/close_icon.png");
+        background-position: 50%;
+        background-size: 13px;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0;
+        top: 16px;
+    }
+}
+#footer {
+    color: #aaa;
+    line-height: 1.48;
+    text-align: center;
+    padding: 0 10px;
+    p {
+        margin: 12px 0;
+        overflow: hidden;
+        a {
+            border-right: 1px solid #ddd;
+            height: 20px;
+            line-height: 20px;
+            width: 33%;
+            box-sizing: border-box;
+            float: left;
+            display: inline-block;
+            color: #666;
+            i {
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                vertical-align: top;
+                background: url("../img/ui_2.png") center no-repeat;
+                background-size: 400px;
+            }
+            span {
+                line-height: 20px;
+            }
+            .icons-computer {
+                background-position: -210px -10px;
+                margin-right: 5px;
+            }
+            .icons-app {
+                background-position: -210px -59px;
+                margin-right: 5px;
+            }
+            .icons-top {
+                background-position: -210px -109px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
